@@ -1,0 +1,48 @@
+name: 🐞 백로그 버그 수정
+description: 버그를 알립니다.
+title: "[버그] "
+labels: ["🐞 버그 알림"]
+body:
+    - type: input
+      validations:
+          required: true
+      attributes:
+          label: "🐞 버그 요약"
+          description: "버그 요약을 적으세요."
+          placeholder: 예) 프로필 정보를 수정 창이 나타나질 않습니다.
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "🐛 작업할 항목"
+          description: "작업할 항목을 적으세요."
+          placeholder: |
+              예) - 프로필 수정 창 고정
+                  - 뒤로가기 이동시 사라지지 않게
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "📣 제안 사항"
+          description: "작업자에게 제공하고 싶은 제안을 남기세요"
+          placeholder: |
+              예) - 태그에 fixed를 쓰는 것을 제안합니다.
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "📚 추가 정보"
+          description: "작업자에게 제공하고 싶은 추가정보를 남기세요"
+          placeholder: |
+              예) - 참고 사이트: https://vitest.dev/
+
+    - type: checkboxes
+      attributes:
+          label: "🔥 우선순위"
+          options:
+              - label: 긴급
+              - label: 필수
+              - label: 대기
