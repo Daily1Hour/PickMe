@@ -1,0 +1,54 @@
+name: 🆘 도움 요청
+description: 도움 요청합니다.
+title: "[도움 요청] "
+labels: ["🆘 도움 요청"]
+body:
+    - type: input
+      validations:
+          required: true
+      attributes:
+          label: "📌 문제 요약"
+          description: "간단하게 문제를 설명합니다."
+          placeholder: 예) API 요청 시 응답이 500 에러가 발생합니다.
+
+    - type: textarea
+      validations:
+          required: true
+      attributes:
+          label: "💥 발생 상황"
+          description: "문제가 발생한 환경과 상황을 설명합니다."
+          placeholder: 예) 프론트엔드에서 버튼 클릭 후 API 호출 시
+
+    - type: textarea
+      validations:
+          required: true
+      attributes:
+          label: "📝 질문 내용"
+          description: "구체적으로 무엇을 묻고자 하는지 설명합니다."
+          placeholder: |
+              예) - async 지역스코프 문제로 빌드 시에 오류가 발생합니다.
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "⚠️ 오류 메시지"
+          description: "오류 메시지를 제공합니다."
+          placeholder: |
+              예) Uncaught TypeError: Cannot read property 'id' of undefined
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "📚 추가 정보"
+          description: "문제가 발생한 화면을 남기세요"
+          placeholder: 예) 스크린샷
+
+    - type: checkboxes
+      attributes:
+          label: "🔥 우선순위"
+          options:
+              - label: 긴급
+              - label: 필수
+              - label: 대기
