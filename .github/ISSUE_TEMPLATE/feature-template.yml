@@ -1,0 +1,41 @@
+name: 📋 기능 추가
+description: 작업 항목을 추가합니다.
+title: "[기능] "
+labels: ["📋 기능 추가"]
+body:
+    - type: input
+      validations:
+          required: true
+      attributes:
+          label: "📌 필요한 작업"
+          description: "작업 요약을 적으세요."
+          placeholder: 예) 사용자가 자신의 프로필 정보를 수정할 수 있는 기능을 추가해야 합니다. 이 기능은 프로필 사진, 이름, 이메일 주소 등을 수정할 수 있어야 합니다.
+
+    - type: textarea
+      validations:
+          required: true
+      attributes:
+          label: "📝 작업할 항목"
+          description: "작업할 항목을 적으세요."
+          placeholder: |
+              예) - 프로필 사진 변경 기능
+                  - 이름, 이메일 수정 기능
+                  - 변경 사항을 저장할 수 있는 버튼
+                  - 성공/실패 메시지 표시
+
+    - type: textarea
+      validations:
+          required: false
+      attributes:
+          label: "📚 추가 정보"
+          description: "작업자에게 제공하고 싶은 추가정보를 남기세요"
+          placeholder: |
+              예) - 참고 사이트: https://vitest.dev/
+
+    - type: checkboxes
+      attributes:
+          label: "🔥 우선순위"
+          options:
+              - label: 긴급
+              - label: 필수
+              - label: 대기
