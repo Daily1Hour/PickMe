@@ -1,0 +1,31 @@
+name: Close issue when all tasks are completed
+on:
+  issues:
+    types: [edited]
+
+jobs:
+  check_issue_body:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get issue body
+        id: get_issue
+        run: |
+          ISSUE_BODY="${{ github.event.issue.body }}"
+          
+          if [[ "$ISSUE_BODY" =~ "- [ ]" ]]; then
+            echo "Found unchecked checkbox (- [ ])."
+            echo "all_tasks_completed=false" >> $GITHUB_ENV
+          else
+            echo "No unchecked checkboxes found."
+            echo "all_tasks_completed=true" >> $GITHUB_ENV
+          fi
+
+      - name: Conditional close issue step
+        if: env.all_tasks_completed == 'true'
+        run: |
+          curl -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -d '{"state": "closed"}' \
+               https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}
