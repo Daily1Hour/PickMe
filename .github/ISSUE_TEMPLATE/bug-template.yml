@@ -1,4 +1,4 @@
-name: 🐞 백로그 버그 수정
+name: 🐞 버그 알림
 description: 버그를 알립니다.
 title: "[버그] "
 labels: ["🐞 버그 알림"]
@@ -18,8 +18,8 @@ body:
           label: "🐛 작업할 항목"
           description: "작업할 항목을 적으세요."
           placeholder: |
-              예) - 프로필 수정 창 고정
-                  - 뒤로가기 이동시 사라지지 않게
+              예) - [ ] 프로필 수정 창 고정
+                  - [ ] 뒤로가기 이동시 사라지지 않게
 
     - type: textarea
       validations:
@@ -38,11 +38,3 @@ body:
           description: "작업자에게 제공하고 싶은 추가정보를 남기세요"
           placeholder: |
               예) - 참고 사이트: https://vitest.dev/
-
-    - type: checkboxes
-      attributes:
-          label: "🔥 우선순위"
-          options:
-              - label: 긴급
-              - label: 필수
-              - label: 대기

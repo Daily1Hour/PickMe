@@ -26,7 +26,7 @@ body:
           label: "📝 질문 내용"
           description: "구체적으로 무엇을 묻고자 하는지 설명합니다."
           placeholder: |
-              예) - async 지역스코프 문제로 빌드 시에 오류가 발생합니다.
+              예) - [ ] async 지역스코프 문제로 빌드 시에 오류가 발생합니다.
 
     - type: textarea
       validations:
@@ -44,11 +44,3 @@ body:
           label: "📚 추가 정보"
           description: "문제가 발생한 화면을 남기세요"
           placeholder: 예) 스크린샷
-
-    - type: checkboxes
-      attributes:
-          label: "🔥 우선순위"
-          options:
-              - label: 긴급
-              - label: 필수
-              - label: 대기
