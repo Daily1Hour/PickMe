@@ -140,9 +140,6 @@ UI 라이브러리
 라이브러리
 [![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white)](https://socket.io/)
 
-컨테이너
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white)](https://www.docker.com/)
-
 테스트툴
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)](https://jestjs.io/)
 [![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)](https://vitest.dev/)
@@ -169,3 +166,11 @@ UI 라이브러리
 
 데이터베이스
 [![Amazon DynamoDB](https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)](https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/)
+
+### 데브옵스
+
+컨테이너
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white)](https://www.docker.com/)
+
+CI/CD
+[![Github Actions](https://img.shields.io/badge/Github_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://ap-northeast-2.console.aws.amazon.com/dynamodbv2/)
