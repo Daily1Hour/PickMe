@@ -8,7 +8,8 @@
 3. [**주요 기능**](#주요-기능)
    - [프론트엔드 프로젝트](#프론트엔드-프로젝트)
    - [백엔드 프로젝트](#백엔드-프로젝트)
-4. [**기술 스택**](#기술-스택)
+4. [**CI/CD**](#cicd)
+5. [**기술 스택**](#기술-스택)
 
 ## 프로젝트 소개
 
@@ -93,6 +94,17 @@ PICK ME는 취업 준비생들이 면접 준비를 효율적으로 할 수 있�
 | [PickMe-Calendar-Service](https://github.com/Daily1Hour/PickMe-Calendar-Service) | 캘린더 마이크로 서비스 | 사용자가 캘린더에 회사명, 면접 시간, 면접 위치 등 면접 일정을 저장하고 관리할 수 있는 서비스 |
 | [PickMe-Reminder-Service](https://github.com/Daily1Hour/PickMe-Reminder-Service) | 알림 마이크로 서비스 | API를 통해 알림 시간을 관리하고, 스케쥴러가 매시간 알림을 발송하는 서비스 |
 | [PickMe-Chat-Service](https://github.com/Daily1Hour/PickMe-Chat-Service) | 채팅 마이크로 서비스 | 사용자 간 실시간 채팅을 제공하고 참가 중인 사용자를 관리하는 서비스 |
+
+## CI/CD
+
+![cicd drawio](https://github.com/user-attachments/assets/0d025661-a85b-4d40-b3ac-f88df81e09b8)
+
+1. **소스 코드 관리**: Git으로 소스 코드를 관리하고, GitHub에 푸시 후 Pull Request(PR)을 생성합니다.
+2. **코드 빌드 및 테스트**: GitHub Actions를 사용하여 코드 빌드, 테스트, 린트를 수행합니다.
+3. **PR 승인 및 병합**: main 브랜치는 보호되어 있으며, PR에 대한 리뷰 승인을 받은 후 main 브랜치에 병합됩니다.
+4. **도커 이미지 빌드**: AWS CloudBuild에서 도커 컨테이너 이미지를 빌드합니다.
+5. **ECR로 이미지 푸시**: 빌드된 이미지를 AWS ECR로 푸시합니다.
+6. **컨테이너 배포**: AWS CodeDeploy를 사용하여 ECR에서 이미지를 가져와 컨테이너를 배포하고, ECS에서 실행됩니다.
 
 ## 기술 스택
 
