@@ -12,7 +12,10 @@
    - [빌드 워크플로어](#빌드-워크플로어)
    - [Git Flow 전략](#git-flow-전략)
    - [소스 코드 관리 (SCM)](#소스-코드-관리-scm)
-5. [**기술 스택**](#기술-스택)
+5. [**인프라**](#인프라)
+6. [**기술 스택**](#기술-스택)
+
+<br/>
 
 ## 프로젝트 소개
 
@@ -43,12 +46,15 @@
 - **정보 접근성 향상**: 취업 준비생이 필요한 정보를 보다 체계적이고 쉽게 정리할 수 있어, 준비 과정의 혼란을 줄인다.
 
 </details>
+<br/>
 
 ## 팀 소개
 
 | [김아영](https://github.com/Cameist) | [김영진](https://github.com/yxxngjxn) | [안진수](https://github.com/Awlstn) | [정원철](https://github.com/NarciSource) |
 | :-: | :-: | :-: | :-: |
 | [![A0](https://avatars.githubusercontent.com/u/86555254)](https://github.com/Cameist) | [![Youngjin](https://avatars.githubusercontent.com/u/141807721)](https://github.com/yxxngjxn) | [![Jinsoo](https://avatars.githubusercontent.com/u/116646091)](https://github.com/Awlstn) | [![Woncheol](https://avatars.githubusercontent.com/u/26417221)](https://github.com/NarciSource) |
+
+<br/>
 
 ## 주요 기능
 
@@ -98,9 +104,11 @@ PICK ME는 취업 준비생들이 면접 준비를 효율적으로 할 수 있�
 | [PickMe-Reminder-Service](https://github.com/Daily1Hour/PickMe-Reminder-Service) | 알림 마이크로 서비스 | API를 통해 알림 시간을 관리하고, 스케쥴러가 매시간 알림을 발송하는 서비스 |
 | [PickMe-Chat-Service](https://github.com/Daily1Hour/PickMe-Chat-Service) | 채팅 마이크로 서비스 | 사용자 간 실시간 채팅을 제공하고 참가 중인 사용자를 관리하는 서비스 |
 
+<br/>
+
 ## CI/CD
 
-![cicd drawio](https://github.com/user-attachments/assets/0d025661-a85b-4d40-b3ac-f88df81e09b8)
+![cicd](https://github.com/user-attachments/assets/0d025661-a85b-4d40-b3ac-f88df81e09b8)
 
 1. **소스 코드 관리**: Git으로 소스 코드를 관리하고, GitHub에 푸시 후 Pull Request(PR)을 생성합니다.
 2. **코드 빌드 및 테스트**: GitHub Actions를 사용하여 코드 빌드, 테스트, 린트를 수행합니다.
@@ -139,6 +147,12 @@ main 브랜치를 보호하고 PR을 통해 리뷰어의 승인을 통해 병합
 - 자동 스크립트 추가
   - setup.ps1 : 윈도우용
   - setup.zsh : 리눅스용
+
+<br/>
+
+## 인프라
+
+![infra](https://github.com/user-attachments/assets/6fa177f4-b2f7-4082-8dbf-484381cd527c)
 
 ## 기술 스택
 
