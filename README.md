@@ -9,6 +9,9 @@
    - [프론트엔드 프로젝트](#프론트엔드-프로젝트)
    - [백엔드 프로젝트](#백엔드-프로젝트)
 4. [**CI/CD**](#cicd)
+   - [빌드 워크플로어](#빌드-워크플로어)
+   - [Git Flow 전략](#git-flow-전략)
+   - [소스 코드 관리 (SCM)](#소스-코드-관리-scm)
 5. [**기술 스택**](#기술-스택)
 
 ## 프로젝트 소개
@@ -105,6 +108,37 @@ PICK ME는 취업 준비생들이 면접 준비를 효율적으로 할 수 있�
 4. **도커 이미지 빌드**: AWS CloudBuild에서 도커 컨테이너 이미지를 빌드합니다.
 5. **ECR로 이미지 푸시**: 빌드된 이미지를 AWS ECR로 푸시합니다.
 6. **컨테이너 배포**: AWS CodeDeploy를 사용하여 ECR에서 이미지를 가져와 컨테이너를 배포하고, ECS에서 실행됩니다.
+
+### 빌드 워크플로어
+
+- [graddle-build](https://github.com/Daily1Hour/PickMe/blob/spring-workflow/.github/workflows/gradle-build.yml)
+- [vite-build](https://github.com/Daily1Hour/PickMe/blob/vite-workflow/.github/workflows/vite-build.yml)
+
+1. PR이 열리면 워크플로어를 작동해서 빌드 성공을 확인
+2. 빌드 결과는 아티펙터로 저장해서 다른 워크플로어에서 사용할 수 있게 준비
+
+### Git Flow 전략
+
+- main 브랜치: 프로덕션 상태 유지
+- develop, issue- 브랜치: 개발 작업
+
+main 브랜치를 보호하고 PR을 통해 리뷰어의 승인을 통해 병합하는 규칙을 설정
+
+1. 깃헙 Rulesets에 main 브랜치 보호 설정 [Main-Rule](https://github.com/Daily1Hour/PickMe/blob/main/.github/rulesets/Main-Rule.json)
+
+   - `required_approving_review_count` : 리뷰어 승인 요구
+   - `dismiss_stale_reviews_on_push` : 새로운 커밋이 PR에 푸시되면 이전에 완료된 리뷰는 자동으로 무효화
+   - `require_last_push_approval` : 최종 푸시에 대한 승인 요구. PR을 머지하기 전에 마지막 커밋에 대한 리뷰 승인이 완료되어야 함.
+
+2. PR 요청시 리뷰어 자동 할당 워크플로어 작성 [auto-assign](https://github.com/Daily1Hour/PickMe/blob/main/.github/workflows/auto-assign.yml)
+
+### 소스 코드 관리 (SCM)
+
+- **.gitmessage** 커밋 메시지 관리를 주석으로 제공
+- **.gitconfig** 디폴트 브랜치를 develop으로 설정
+- 자동 스크립트 추가
+  - setup.ps1 : 윈도우용
+  - setup.zsh : 리눅스용
 
 ## 기술 스택
 
