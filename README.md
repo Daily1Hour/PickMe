@@ -1,4 +1,9 @@
+<div align="center">
+
 # 면접 기록 서비스 PICK ME
+
+![pickmeIcon-002](https://github.com/user-attachments/assets/f8cfc783-ce87-4289-a8cd-b22b1d0bef3d)
+</div>
 
 ## 목차
 
